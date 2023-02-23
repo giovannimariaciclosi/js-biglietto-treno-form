@@ -72,6 +72,7 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  flex-wrap: wrap;
   gap: 1em;
   border-radius: 20px;
   padding: 1em 0;
