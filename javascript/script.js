@@ -68,4 +68,40 @@ Il recap dei dati e l'output del prezzo finale, andranno quindi stampati in pagi
 // }
 
 
-let userTripKmEl = document.getElementById
+let userTripKmEl = document.getElementById("userTripKm");
+let userAge = document.getElementById("userAge");
+let userInfoButton = document.getElementById('userInfoBtn');
+
+let pricePerKm = 0.21
+let baseTicketPrice;
+let finalPrice;
+
+
+userInfoButton.addEventListener('click', function() {
+  // tutto il codice che vogliamo eseguire all'occorrenza dell'evento
+  console.log(userTripKmEl.value);
+  console.log(userAge.value);
+
+  if (userAge.value < 18) {
+    let baseTicketPrice = (userTripKmEl.value * pricePerKm);
+    let finalPrice = baseTicketPrice - baseTicketPrice / 100 * 20;
+
+    console.log("prezzo scontato under18: " + finalPrice);
+
+  } else if (userAge.value > 65) {
+    
+    let baseTicketPrice = (userTripKmEl.value * pricePerKm);
+    let finalPrice = baseTicketPrice - baseTicketPrice / 100 * 20;
+
+    finalPrice = baseTicketPrice - baseTicketPrice * 0.4;
+    console.log("prezzo scontato over65: " + finalPrice);
+
+  } else {
+
+    let baseTicketPrice = (userTripKmEl.value * pricePerKm);
+    let finalPrice = baseTicketPrice - baseTicketPrice / 100 * 20;
+    
+    finalPrice = baseTicketPrice;
+    console.log("prezzo: " + finalPrice);
+  }
+});
