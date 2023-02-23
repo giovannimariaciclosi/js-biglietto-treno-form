@@ -70,6 +70,7 @@ Il recap dei dati e l'output del prezzo finale, andranno quindi stampati in pagi
 
 let userTripKmEl = document.getElementById("userTripKm");
 let userAge = document.getElementById("userAge");
+let userNameSurname = document.getElementById("userNameSurname");
 let userInfoButton = document.getElementById('userInfoBtn');
 
 let pricePerKm = 0.21

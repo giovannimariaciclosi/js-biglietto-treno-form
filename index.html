@@ -5,23 +5,84 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Train Tickets</title>
+
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   
   <div class="container-centered">
-    <div>
-      <label for="userTripKm">Km da percorrere</label>
-      <input id="userTripKm" type="number">
+
+    <h1 id="titolo">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
+    <div class="user-info-container">
+      <div class="user-info">
+
+        <div class="form">
+          <label for="userNameSurname">Nome e Cognome</label>
+          <input id="userNameSurname" type="number">
+        </div>
+    
+        <div class="form">
+          <label for="userTripKm">Km da percorrere</label>
+          <input id="userTripKm" type="number">
+        </div>
+    
+        <div class="form">
+          <label for="userAge">Età</label>
+          <input id="userAge" type="number">
+        </div>
+        <!-- <div>
+          <form>
+            <label for="">Fascia d'Età</label>
+            <input id="ageGroup" list="ageGroup">
+            <datalist id="ageGroup">
+              <option value="Minorenne">
+              <option value="Maggiorenne">
+              <option value="Over65">
+            </datalist>
+          </form> -->
+        <!-- </div> -->
+      </div>
+      <div class="buttons">
+        <button id="userInfoBtn">Genera</button>
+        <button id="resetUserInfoBtn">Annulla</button>
+      </div>
     </div>
+  </div>
 
-    <div>
-      <label for="userAge">Età</label>
-      <input id="userAge" type="number">
-      <button id="userInfoBtn">Genera</button>
+  <div class="container-centered">
+    <h1>IL TUO BIGLIETTO</h1>
+    <div class="user-details-container">
+      <h2>DETTAGLIO PASSEGGERI</h2>
+      <div class="user-details-container-inner">
+        <div class="user-details">
+          <span id="user-name-title">NOME PASSEGGERO</span>
+          <span id="insertUserName"></span>
+        </div>
+  
+        <div class="user-details">
+          <span class="user-title">Offerta</span>
+          <span class="user-subtitle" id="insertTicketType">Biglietto Standard</span>
+        </div>
+  
+        <div class="user-details">
+          <span class="user-title">Carrozza</span>
+          <span class="user-subtitle">5</span>
+        </div>
+  
+        <div class="user-details">
+          <span class="user-title">Codice CP</span>
+          <span class="user-subtitle">92911</span>
+        </div>
+  
+        <div class="user-details">
+          <span class="user-title">Costo biglietto</span>
+          <span class="user-subtitle" id="insertTicketPrice"></span>
+        </div>
+      </div>
+
+
+      </div>
     </div>
-
-
-
   </div>
 
   <script type="text/javascript" src="javascript/script.js"></script>
