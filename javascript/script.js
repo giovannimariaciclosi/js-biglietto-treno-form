@@ -53,6 +53,10 @@ userInfoButton.addEventListener('click', function() {
 
     document.getElementById("insertUserName").innerHTML = userNameSurname.value;
     document.getElementById("insertTicketPrice").innerHTML = finalPrice;
+    document.getElementById("insertTicketType").innerHTML = "Biglietto Scontato under18";
+    document.getElementById("insertTrainNumber").innerHTML = Math.floor(Math.random() * 10 + 1);
+    document.getElementById("insertCpCode").innerHTML = Math.floor(Math.random() * 100000 + 1);
+    
 
 
   } else if (userAge.value > 65) {
@@ -64,6 +68,9 @@ userInfoButton.addEventListener('click', function() {
 
     document.getElementById("insertUserName").innerHTML = userNameSurname.value;
     document.getElementById("insertTicketPrice").innerHTML = finalPrice;
+    document.getElementById("insertTicketType").innerHTML = "Biglietto Scontato over65";
+    document.getElementById("insertTrainNumber").innerHTML = Math.floor(Math.random() * 10 + 1);
+    document.getElementById("insertCpCode").innerHTML = Math.floor(Math.random() * 100000 + 1);
 
   } else {
 
@@ -74,17 +81,21 @@ userInfoButton.addEventListener('click', function() {
 
     document.getElementById("insertUserName").innerHTML = userNameSurname.value;
     document.getElementById("insertTicketPrice").innerHTML = finalPrice;
-
+    document.getElementById("insertTicketType").innerHTML = "Biglietto Standard";
+    document.getElementById("insertTrainNumber").innerHTML = Math.floor(Math.random() * 10 + 1);
+    document.getElementById("insertCpCode").innerHTML = Math.floor(Math.random() * 100000 + 1);
   }
 });
 
 
 resetUserInfoButton.addEventListener('click', function() {
-  // tutto il codice che vogliamo eseguire all'occorrenza dell'evento
-  document.getElementById("insertUserName").innerHTML = "";
-  document.getElementById("insertTicketPrice").innerHTML = "";
+  // azzero tutti i campi
   document.getElementById("userNameSurname").value = "";
   document.getElementById("userTripKm").value = "";
   document.getElementById("userAge").value = "";
-
+  document.getElementById("insertUserName").innerHTML = "";
+  document.getElementById("insertTicketType").innerHTML = "";
+  document.getElementById("insertTrainNumber").innerHTML = "";
+  document.getElementById("insertCpCode").innerHTML = "";
+  document.getElementById("insertTicketPrice").innerHTML = "";
 });
